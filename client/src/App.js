@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Join from './Components/Join/Join';
+import Join from './components/Join/Join';
 
 
 
