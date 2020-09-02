@@ -9,7 +9,7 @@ export default function Homepage() {
         <table>
           <tr>
             <td>
-              <img src="https://image.shutterstock.com/image-vector/vector-illustration-cartoon-house-isolated-260nw-298428176.jpg"></img>
+              <img src="https://image.shutterstock.com/image-vector/vector-illustration-cartoon-house-isolated-260nw-298428176.jpg" alt=""></img>
               <p>This is where the two buttons for navigating to /chess and /connect 4 are rendered for interaction</p>
               {/* this is where the two buttons for navigating to /chess and /connect 4 are rendered for interaction */}
             </td>

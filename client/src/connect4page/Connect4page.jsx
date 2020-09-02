@@ -8,7 +8,7 @@ export default function Connect4() {
         <table>
           <tr>
             <td>
-              <img src="https://images-na.ssl-images-amazon.com/images/I/51PFqUcGZNL._AC_SY400_.jpg"></img>
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51PFqUcGZNL._AC_SY400_.jpg" alt=""></img>
             {/* this is where connect 4 component is rendered */}
             </td>
             <td>This is where live chat component is placed</td>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Routing from './Router.jsx'
-import Homepage from './homepage/Homepage'
+// import Homepage from './homepage/Homepage'
 
 
 function App() {
