@@ -8,11 +8,13 @@ const Routing = () => {
   return (
     <Router>
       <nav>
+      {/* <Link to='/'>Home</Link> */}
         <Link to='/home'>Home</Link>
         <Link to='/chess'>Chess</Link>
         <Link to='/connect4'>Connect4</Link>
        </nav>
       <Switch>
+        {/* <Route path='/' component={Homepage}/> */}
         <Route path='/home' component={Homepage}/>
         <Route path='/chess' component={Chess}/>
         <Route path='/connect4' component={Connect4}/>
