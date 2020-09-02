@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
-
+import Routing from './Router.jsx'
+import Homepage from './homepage/Homepage'
 
 
 function App() {
   return (
     <div>
       <h1>Chat Play Chill</h1>
-      <h2>Homepage</h2>
+      < Routing />
+      {/* < Homepage /> */}
+      
       {/* <Homepage /> */}
-      {/* <Connect4 />
-      <Chess /> */}
+      {/* <Connect4 /> */}
+      {/* <Chess /> */}
     </div>
   );
 }
