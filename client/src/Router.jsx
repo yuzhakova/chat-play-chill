@@ -8,7 +8,7 @@ const Routing = () => {
   return (
     <Router>
       <nav>
-        <Link to='/home'>Homepage</Link>
+        <Link to='/home'>Home</Link>
         <Link to='/chess'>Chess</Link>
         <Link to='/connect4'>Connect4</Link>
        </nav>
