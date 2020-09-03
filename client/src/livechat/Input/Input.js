@@ -1,11 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-const Input = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+import './Input.css';
 
-export default Input
+const Input = ({ message, setMessage, sendMessage }) => ( //message property - destructure input into the props
+  <form className="form">
+    <input
+    className="input"
+    type="text"
+    placeholder="Share your thoughts"
+    value={message}
+    onChange={(event) => setMessage(event.target.value)}
+    onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
+
+    />
+    <button className="sendButton" onClick={(event) => sendMessage(event)}>Send</button>
+  </form>
+)
+  export default Input;
+
