@@ -1,7 +1,4 @@
 //helper functions to manage users => used to manage users on specific sockets in index.js file
-
-const express = require("express");
-
 const users = [];
 
 const addUser = ({ id, name, room }) => {
@@ -12,6 +9,7 @@ const addUser = ({ id, name, room }) => {
   //check if user name is taken in the same room
   const existingUser = users.find((user) => user.room === room && user.name === name);
   
+  if(!name || !room) return { error: 'Name and Room cannot be blank.' };
   if(existingUser) {return { error: 'Username is taken'}};
   
   const user = { id, name, room };
