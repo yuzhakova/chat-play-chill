@@ -1,7 +1,7 @@
 # chat-play-chill
 ## board games fun
 - Live Chat
-- Connect 4 Game
+- Connect4 Game
 - Chess
 
 # CLIENT

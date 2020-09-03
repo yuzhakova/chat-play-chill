@@ -1,4 +1,5 @@
 import React from 'react';
+import Join from '../livechat/Join/Join';
 
 export default function Homepage() {
   return (
@@ -14,10 +15,15 @@ export default function Homepage() {
                 {/* this is where the two buttons for navigating to /chess and /connect 4 are rendered for interaction */}
               </td>
               <td>This is where live chat component is placed</td>
-              {/* this is where live chat component is placed */}
+               {/* this is where live chat component is placed */}
             </tr>
           </tbody>
         </table>
+
+        <div>
+          <Join />
+        </div>
+        
       </div>
     </div>  
   );
