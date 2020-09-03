@@ -13,12 +13,13 @@ const io = socketio(server); //back-end socketio has many methods (io.on 'connec
 io.on('connection', (socket) => { //this will be connecting to client-side socket
   console.log('A new client connection is established!');
 
+  socket.on('join', ({ name, room }) => {
+    console.log(name, room);
+  });
+
   socket.on('disconnect', () => {
     console.log('User disconnected!');
   })
-  // socket.on('join', ({ name, room }, callback) => {
-  //   console.log('User disconnected!')
-  // })
 });
 
 app.use (router); //call router as app middleware
