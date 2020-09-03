@@ -2,7 +2,7 @@ const express = require ('express');
 const socketio = require ('socket.io');
 const http = require ('http');
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
 const router = require('./router');
 
@@ -13,8 +13,12 @@ const io = socketio(server); //back-end socketio has many methods (io.on 'connec
 io.on('connection', (socket) => { //this will be connecting to client-side socket
   console.log('A new client connection is established!');
 
-  socket.on('join', ({ name, room }, callback) => {
-    console.log('User disconnected!')
+  socket.on('join', ({ name, room }) => {
+    console.log(name, room);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User disconnected!');
   })
 });
 
