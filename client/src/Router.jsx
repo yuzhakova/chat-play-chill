@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import Homepage from './homepage/Homepage'
 import Chess from './chesspage/Chesspage'
 import Connect4 from './connect4page/Connect4page'
+import LiveChat from './livechat/LiveChat'
 
 const Routing = () => {
   return (
@@ -17,6 +18,7 @@ const Routing = () => {
         {/* <Route path='/home' component={Homepage}/> */}
         <Route path='/chess' component={Chess}/>
         <Route path='/connect4' component={Connect4}/>
+        <Route path='/chat' component={LiveChat}/>
         <Route path='/' component={Homepage}/>
       </Switch> 
     </Router>
