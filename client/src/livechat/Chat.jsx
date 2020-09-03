@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'; //useState and useEffect lifecycle methods inside the hooks
 import queryString from 'query-string';
 import io from 'socket.io-client';
+import Messages from './Message/Messages';
 
 import './Chat.css';
 
@@ -11,30 +12,57 @@ let socket;
 const Chat = ({ location }) => { //hook useEffect lets you use lifecycle methods/side effects in function componenets
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
+  const [users, setUsers] = useState('');
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]);
   const ENDPOINT = 'localhost:5000';
   
   useEffect(() => {
-    const { name, room } = queryString.parse(location.search); //this is to retrieve the data users entered when joining
+    const { name, room } = queryString.parse(location.search);
 
     socket = io(ENDPOINT); //pass end-point server
 
     setName(name);
     setRoom(room);
 
-    socket.emit('join', { name, room }, ()=> {
-    
+    socket.emit('join', { name, room }, (error) => { //setup for users joining
+      if(error) {
+        alert(error);
+      }
     });
 
     return () => { //used for disconnecting events/unmounting
       socket.emit('disconnect') //the naming 'disconnect' must be the same as server side
 
-      socket.off(); //used to turn off an instance of the client socket
-    }
+      socket.off();
+    } 
   }, [ENDPOINT, location.search]);
 
+  useEffect(() => {
+    socket.on('message', (message) => {
+      setMessages(messages => [...messages, message]);
+    })
+    socket.on("roomData", ({ users }) => {
+      setUsers(users);
+    });
+  }, []) //run array only when messages change
+
+  //function for sending messages & clear after sent
+  const sendMessage = (event) => {
+    event.preventDefault(); //prevent default behavior of full browser refresh with a keypress/button click
+    if(message) {
+      socket.emit('sendMessage', message, () => setMessage(''));
+    }
+  }
+  //main component for chat
   return (
-    <h1>Chat</h1>
-  )
+    <div className="outerContainerChat">
+      <div className="containerChat">
+        <Messages messages={messages} name={name}/> 
+
+      </div>
+    </div>
+  );
 }
 
 export default Chat;
