@@ -14,8 +14,11 @@ function Chess() {
 
   return (
     <div>
-      <div>
-        <Board board={board} />
+      <div className="container">
+        <div className="board-container">
+          <Board board={board} />
+        </div>
+        
         <p>This is the Chesspage</p>
         <table>
           <tbody>
