@@ -9,3 +9,10 @@ export const gameSubject = new BehaviorSubject({
 })
 
 chess.board() //this method gives an array representation of the board
+
+export function move(from, to) {
+  const legalMove = chess.move({ from, to }) //method from the chess library (only if the move is legal)
+  if (legalMove) {
+    gameSubject.next({ board: chess.board() })
+  }
+}
