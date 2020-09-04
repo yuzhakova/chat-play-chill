@@ -3,10 +3,10 @@ import Square from './Square';
 import Piece from './Piece';
 
 
-export default function BoardSquare({ piece }) {
+export default function BoardSquare({ piece, black }) {
   return (
     <div>
-      <Square>{piece && <Piece piece={piece} />}</Square>
+      <Square black={black}>{piece && <Piece piece={piece} />}</Square>
     </div>
   )
 }
