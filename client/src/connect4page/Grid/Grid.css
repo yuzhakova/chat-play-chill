@@ -1,0 +1,15 @@
+.board {
+  background: lightblue;
+  width: 800px;
+  margin: auto;
+}
+
+.board > .cell {
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin: 5px;
+}

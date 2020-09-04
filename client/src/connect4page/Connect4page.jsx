@@ -1,10 +1,12 @@
 import React from "react";
+import Grid from "./Grid/Grid"
 
 export default function Connect4() {
   return (
     <div>
       <div>
         <p>This is the Connect4page</p>
+        <Grid />
         <table>
           <tbody>
             <tr>
