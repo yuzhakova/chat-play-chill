@@ -5,7 +5,7 @@ import Piece from './Piece';
 
 export default function BoardSquare({ piece, black }) {
   return (
-    <div>
+    <div className='board-square'>
       <Square black={black}>{piece && <Piece piece={piece} />}</Square>
     </div>
   )
