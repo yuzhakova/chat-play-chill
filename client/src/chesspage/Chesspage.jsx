@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import './Chesspage.css';
+import { gameSubject } from './Game/Game';
+import Board from './Board/Board';
 
-export default function Chess() {
+function Chess() {
+  const [board, setBoard] = useState([])
+  useEffect(() => {
+    const subscribe = gameSubject.subscribe((game) => 
+      setBoard(game.board)
+    )
+    return () => subscribe.unsubscribe()
+  }, [])
+
   return (
     <div>
-      <div>
+      <div className="container">
+        <div className="board-container">
+          <Board board={board} />
+        </div>
+        
         <p>This is the Chesspage</p>
         <table>
           <tbody>
@@ -19,3 +34,5 @@ export default function Chess() {
     </div>
   );
 }
+
+export default Chess
