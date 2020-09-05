@@ -23,19 +23,19 @@ const intitializeBoard = () => {
   return board;
 };
 
-class Grid extends React.Component<{}, State> {
+class Connect4Grid extends React.Component<{}, State> {
   state: State = {
     board: intitializeBoard(),
     playerTurn: Player.One,
   };
 
-  grid = () => {
+  connect4Grid = () => {
     const { board } = this.state;
-    return board.map((player, index) => this.gridPiece(player, index));
+    return board.map((player, index) => this.connect4GridPiece(player, index));
   };
 
 
-  gridPiece = (player: Player, index: number) => {
+  connect4GridPiece = (player: Player, index: number) => {
     return (
       <div
         className="cell"
@@ -49,7 +49,7 @@ class Grid extends React.Component<{}, State> {
     return (
       <div className="App">
         {/* {this.renderGameStatus() } */}
-        <div className="board">{this.grid()}</div>
+        <div className="board">{this.connect4Grid()}</div>
       </div>
     );
   }
