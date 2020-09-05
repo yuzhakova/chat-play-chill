@@ -1,13 +1,13 @@
 .board {
-  background: lightblue;
-  width: 800px;
+  background:#132f78;
+  width: 400px;
   margin: auto;
 }
 
 .board > .cell {
-  width: 100px;
-  height: 100px;
-  background: yellow;
+  width: 45px;
+  height: 45px;
+  background: white;
   display: inline-block;
   box-sizing: border-box;
   border-radius: 50%;

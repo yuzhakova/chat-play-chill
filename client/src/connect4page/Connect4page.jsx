@@ -1,5 +1,6 @@
 import React from "react";
-import Grid from "./Grid/Grid"
+import Grid from "./Grid/Grid.tsx"
+
 
 export default function Connect4() {
   return (
