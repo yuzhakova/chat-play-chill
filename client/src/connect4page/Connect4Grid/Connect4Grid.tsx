@@ -55,7 +55,7 @@ class Connect4Grid extends React.Component<{}, State> {
   }
 }
 
-export default Grid;
+export default Connect4Grid;
 
 // export default function Grid() {
 //   const Player = {
