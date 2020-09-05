@@ -1,29 +1,33 @@
 import React from 'react';
-import Join from '../livechat/Join/Join';
+// import Join from '../livechat/Join/Join';
 
 export default function Homepage() {
   return (
     <div>
       <div>
         <p>This is the Homepage</p>
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <img src="https://image.shutterstock.com/image-vector/vector-illustration-cartoon-house-isolated-260nw-298428176.jpg" alt=""></img>
-                <p>This is where the two buttons for navigating to /chess and /connect 4 are rendered for interaction</p>
-                {/* this is where the two buttons for navigating to /chess and /connect 4 are rendered for interaction */}
-              </td>
-              <td>This is where live chat component is placed</td>
-               {/* this is where live chat component is placed */}
-            </tr>
-          </tbody>
-        </table>
+        <div className="container">
 
-        <div>
-          <Join />
+          <div className="split-section" id="split-1">
+            <div className="split-box">
+              <h1 className="split-heading">
+                <span className="split-heading-main">Want to play chess?</span>
+                <span className="split-heading-sub">follow the link</span>
+              </h1>
+              <a href="/chess" className="btn btn-outline-white">CHESS</a>
+            </div>
+          </div>
+          
+          <div className="split-section" id="split-2">
+            <div className="split-box">
+              <h1 className="split-heading">
+                <span className="split-heading-main">Want to play connect4?</span>
+                <span className="split-heading-sub">follow the link</span>
+              </h1>
+              <a href="/connect4" className="btn btn-outline-white">CONNECT4</a>
+            </div>
+          </div>
         </div>
-        
       </div>
     </div>  
   );
