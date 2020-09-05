@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./Connect4Grid.css";
 
 enum Player {
-  None = null,
+  None = 0,
   One = 1,
   Two = 2
 }
@@ -12,7 +12,6 @@ type Board = Player[];
 interface State {
   board: Board;
   playerTurn: Player;
-  gameState: GameState | Player
 }
 
 const intitializeBoard = () => {
