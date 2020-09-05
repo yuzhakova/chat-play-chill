@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.split-section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: all 1s;
+  /*    background-size: cover;*/
+}
+
+#split-1 {
+  background-image: linear-gradient(to right bottom, rgba(50, 200, 200, 0.7), rgba(200, 200, 100, 0.8)),
+      url(https://picsum.photos/1100.jpg?image=1);
+  color: #fff;
+  background-position: left;
+}
+
+#split-2 {
+  background-image: linear-gradient(to right bottom, rgba(126, 0, 111, 0.7), rgba(40, 0, 131, 0.8)),
+      url(https://picsum.photos/1100.jpg?image=7);
+  color: #fff;
+  background-position: right;
+}
+
+.split-heading {
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.split-heading-main {
+  display: block;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: 10px
+}
+
+.split-heading-sub {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 15px;
+}
+
+.split-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 75%;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 7px 20px;
+  transition: all .5s;
+  position: relative;
+}
+
+.btn:hover {
+  padding: 7px 40px;
+}
+
+.btn-outline-white {
+  border: 3px white solid;
+}
+
+.split-section:hover {
+  width: 150%;
+  z-index: 1;
+}
+
+.btn-outline-white:hover {
+  background-color: #fff;
+  color: #000;
+}
