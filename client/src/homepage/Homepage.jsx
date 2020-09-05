@@ -5,9 +5,7 @@ export default function Homepage() {
   return (
     <div>
       <div>
-        <p>This is the Homepage</p>
         <div className="container">
-
           <div className="split-section" id="split-1">
             <div className="split-box">
               <h1 className="split-heading">
