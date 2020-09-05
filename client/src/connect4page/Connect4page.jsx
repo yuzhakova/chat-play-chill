@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "./Connect4Grid/Connect4Grid.tsx"
+import Connect4Grid from "./Connect4Grid/Connect4Grid.tsx"
 
 
 export default function Connect4() {

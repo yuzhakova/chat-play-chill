@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Grid.css";
+import "./Connect4Grid.css";
 
 enum Player {
   None = null,
