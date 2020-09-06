@@ -1,12 +1,12 @@
 .board {
   background:#132f78;
-  width: 400px;
+  width: 600px;
   margin: auto;
 }
 
 .board > .cell {
-  width: 45px;
-  height: 45px;
+  width: 75px;
+  height: 75px;
   background: white;
   display: inline-block;
   box-sizing: border-box;
