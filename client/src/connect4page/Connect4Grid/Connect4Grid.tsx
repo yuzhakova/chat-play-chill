@@ -14,6 +14,30 @@ interface State {
   playerTurn: Player;
 }
 
+const findEmptyIndex = (board: Board, column: number) => {
+
+  for (let i = 35 + column; i > 0; i-=7) {
+    if (board[i] === Player.None) {
+      return i
+    }
+
+  }
+  return -1
+}
+
+const getNewPlayer = (player: Player) => {
+  if (player === Player.None)
+  return 'noPlayer';
+  if (player === Player.One)
+  return 'playerOne';
+  if (player === Player.Two)
+  return 'playerTwo';
+}
+
+const toggleTurn = (player: Player) => {
+  return player === Player.One ? Player.Two : Player.One
+}
+
 const intitializeBoard = () => {
   const board = [];
   for (let i = 0; i < 42; i++) {
@@ -28,10 +52,31 @@ class Connect4Grid extends React.Component<{}, State> {
     playerTurn: Player.One,
   };
 
+  onClick = (index: number) => () => {
+    const column = index % 7
+
+    this.makeMove(column)
+  }
+
+  makeMove(column: number) {
+    const { board, playerTurn }  = this.state
+
+    const index = findEmptyIndex(board, column)
+
+    const newBoard = board.slice();
+    newBoard[index] = playerTurn;
+
+    this.setState({
+      board: newBoard,
+      playerTurn: toggleTurn(playerTurn)
+    })
+  }
+
   connect4Grid = () => {
     const { board } = this.state;
     return board.map((player, index) => this.connect4GridPiece(player, index));
   };
+
 
 
   connect4GridPiece = (player: Player, index: number) => {
@@ -39,12 +84,14 @@ class Connect4Grid extends React.Component<{}, State> {
       <div
         className="cell"
         key={index}
-      />
+        onClick={this.onClick (index)}
+        data-player={getNewPlayer(player)}  
+      ></div>
+      
     );
   };
 
   render() {
-
     return (
       <div className="App">
         {/* {this.renderGameStatus() } */}
