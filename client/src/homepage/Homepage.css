@@ -26,14 +26,15 @@ body {
 }
 
 #split-1 {
-  background-image: white:
+  background-image: linear-gradient(to right bottom, rgba(50, 200, 200, 0.7), rgba(200, 200, 100, 0.8)),
+      url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   color: #fff;
   background-position: left;
 }
 
 #split-2 {
   background-image: linear-gradient(to right bottom, rgba(126, 0, 111, 0.7), rgba(40, 0, 131, 0.8)),
-      url(https://picsum.photos/1100.jpg?image=7);
+      url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   color: #fff;
   background-position: right;
 }
