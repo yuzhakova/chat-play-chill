@@ -1,9 +1,10 @@
 import React from "react";
 import Connect4Grid from "./Connect4Grid/Connect4Grid.tsx"
 import Join from '../livechat/Join/Join';
+import Chat from '../livechat/Chat';
 
 
-export default function Connect4() {
+export default function Connect4({ socket, name, room, users, messages, onSignIn }) {
   return (
     <div>
       <div className="container">
@@ -18,7 +19,17 @@ export default function Connect4() {
 
         <div className="split-section" id="split-2">
           <div className="split-box">
-            <Join />
+          {name && room ? (
+              <Chat
+                name={name}
+                socket={socket}
+                room={room}
+                messages={messages}
+                users={users}
+              />
+            ) : (
+              <Join onSignIn={onSignIn} />
+            )}
             {/* <a href="/chess" className="btn btn-outline-white">play chess</a> */}
             <h1 className="split-heading">
             </h1>

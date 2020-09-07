@@ -16,8 +16,8 @@ export const gameSubject = new BehaviorSubject({
   board: chess.board()
 })
 
-export function initGame() {
-  const savedGame = localStorage.getItem('savedGame') //to get the game from the local storage
+export function initGame(savedGame) {
+  // const savedGame = localStorage.getItem('savedGame') //to get the game from the local storage
   if(savedGame) {
     chess.load(savedGame)
   }

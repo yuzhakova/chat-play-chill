@@ -1,7 +1,7 @@
 //helper functions to manage users => used to manage users on specific sockets in index.js file
 const users = [];
 
-const addUser = ({ id, name, room }) => {
+const addUser = ({ id, name='', room='' }) => {
   //all lower case all one word no spaces
   name = name.trim().toLowerCase();
   room = room.trim().toLowerCase();

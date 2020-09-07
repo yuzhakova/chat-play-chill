@@ -3,9 +3,11 @@ import './Chesspage.css';
 import { gameSubject, initGame, resetGame } from './Game/Game';
 import Board from './Board/Board';
 import Join from '../livechat/Join/Join';
+import Chat from '../livechat/Chat';
 
 
-function Chess() {
+
+function Chess({ chessState, socket, name, room, users, messages, onSignIn }) {
   const [board, setBoard] = useState([])
   // const [isGameOver, setIsGameOver] = useState()
   const [result, setResult] = useState()
@@ -14,7 +16,7 @@ function Chess() {
 
   useEffect(() => {
     
-    initGame()
+    initGame(chessState)
     const subscribe = gameSubject.subscribe((game) => {
       setBoard(game.board)
       // setIsGameOver(game.isGameOver)
@@ -48,7 +50,17 @@ function Chess() {
                   
         <div className="split-section" id="split-2">
           <div className="split-box">
-            <Join />
+            {name && room ? (
+              <Chat
+                name={name}
+                socket={socket}
+                room={room}
+                messages={messages}
+                users={users}
+              />
+            ) : (
+              <Join onSignIn={onSignIn} />
+            )}
             {/* <a href="/connect4" className="btn btn-outline-white">play connect4</a> */}
             <h1 className="split-heading">
             </h1>
