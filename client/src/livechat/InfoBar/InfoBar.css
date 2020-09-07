@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #154540;
+  /* background: #2D5F5D; */
+  /* background: #16FFBD; */
+  background: #e7717d;
   border-radius: 4px 4px 0 0;
   height: 60px;
   width: 100%;
@@ -13,7 +15,9 @@
   display: flex;
   align-items: center;
   margin-left: 5%;
-  color: white;
+  /* color: white; */
+  color: #16ffbd!important;
+
 }
 
 .rightInnerContainer {

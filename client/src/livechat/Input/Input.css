@@ -16,10 +16,17 @@ input:focus, textarea:focus, select:focus{
 }
 
 .sendButton {
-  color: #fff !important;
+  color: #16ffbd!important;
+  font-size: medium;
+  font-weight: bold;
+  /* color: #fff !important; */
   text-transform: uppercase;
   text-decoration: none;
-  background: #154540;
+  /* background: #2D5F5D; */
+  /* background: #16FFBD; */
+  background: #e7717d;
+
+
   padding: 20px;
   display: inline-block;
   border: none;
