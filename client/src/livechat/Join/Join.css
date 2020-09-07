@@ -68,3 +68,7 @@ html, body {
 button:focus {
   outline-color: yellow;
 }
+
+.hotlink {
+  margin-top: 50px;
+}

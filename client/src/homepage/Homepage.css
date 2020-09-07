@@ -26,8 +26,7 @@ body {
 }
 
 #split-1 {
-  background-image: linear-gradient(to right bottom, rgba(50, 200, 200, 0.7), rgba(200, 200, 100, 0.8)),
-      url(https://picsum.photos/1100.jpg?image=1);
+  background-image: white:
   color: #fff;
   background-position: left;
 }

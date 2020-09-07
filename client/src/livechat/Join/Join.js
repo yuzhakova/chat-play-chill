@@ -17,6 +17,7 @@ const Join = () => {
         <Link onClick={event => (!name || !room) ? event.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
           <button className="buttonJoin mt-20" type="submitJoin">Sign In</button>
         </Link>
+        {/* <a href="/chess" className="btn btn-outline-white hotlink">play chess</a> */}
       </div>
     </div>
   );

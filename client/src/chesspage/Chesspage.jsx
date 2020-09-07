@@ -49,7 +49,7 @@ function Chess() {
         <div className="split-section" id="split-2">
           <div className="split-box">
             <Join />
-            <a href="/connect4" className="btn btn-outline-white">play connect4</a>
+            {/* <a href="/connect4" className="btn btn-outline-white">play connect4</a> */}
             <h1 className="split-heading">
             </h1>
           </div>

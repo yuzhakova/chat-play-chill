@@ -19,7 +19,7 @@ export default function Connect4() {
         <div className="split-section" id="split-2">
           <div className="split-box">
             <Join />
-            <a href="/chess" className="btn btn-outline-white">play chess</a>
+            {/* <a href="/chess" className="btn btn-outline-white">play chess</a> */}
             <h1 className="split-heading">
             </h1>
           </div>
