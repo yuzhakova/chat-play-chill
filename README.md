@@ -26,39 +26,39 @@ Chess game is built in React using hooks and chess.js library. Connect4 is built
   _back-end is served on http://localhost:5000/_
 
 ## Project Stack
-    - React.js, react-router, socket.io-client, TypeScript on the front end
+    - React.js, react-router, socket.io-client, TypeScript on the front-end
     - Node, Express, socket.io on the server-side
-    - Libraries: react dnd (drag and drop), react-scroll-to-bottom, react-emoji, RxJS, query-string
+    - Libraries: react-dnd (drag and drop), react-scroll-to-bottom, react-emoji, RxJS, query-string
 
 
 # Final Product Screenshots
 
 ## Home Page
-!["homepage"]()
+!["homepage"](https://raw.githubusercontent.com/yuzhakova/chat-play-chill/master/client/public/images/homepage.png)
 
 _Main page with options to select Chess or Connect4_
 
 ## Chess Page with Chat Login
-!["chess-chat-login"]()
+!["chess-chat-login"](https://raw.githubusercontent.com/yuzhakova/chat-play-chill/master/client/public/images/chess-chat-login.png)
 
 _Chess page with chat login window_
 
 ## Chess Page with Live Chat
-!["chess-livechat"]()
+!["chess-livechat"](https://raw.githubusercontent.com/yuzhakova/chat-play-chill/master/client/public/images/chess-chat-chatplaychill.png)
 
 _Chess page with livechat_
 
 ## Connect4 Page with Chat Login
-!["connect4-chat-login"]()
+!["connect4-chat-login"](https://raw.githubusercontent.com/yuzhakova/chat-play-chill/master/client/public/images/connect4-chat-login.png)
 
 _Connect4 page with chat login window_
 
 ## Connect4 Page with Live Chat
-!["connect4-livechat"]()
+!["connect4-livechat"](https://raw.githubusercontent.com/yuzhakova/chat-play-chill/master/client/public/images/connect4-chat-chatplaychill.png)
 
 _Connect4 page with livechat_
 
 
 
-## Project Team
-[William Ting](https://github.com/williamdjting) and [Natalia Yuzhakova](https://github.com/yuzhakova)
+  ## Project Team
+  [William Ting](https://github.com/williamdjting) and [Natalia Yuzhakova](https://github.com/yuzhakova)
